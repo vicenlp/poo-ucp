@@ -4,7 +4,7 @@ var router = express.Router();
 var Login = require('../negocios/Login.js');
 var Entidad = require('../negocios/Entidad.js');
 var Equipo = require('../entidades/Equipo.js');
-var JugadoresNegocio = require('../negocios/JugadoresNegocio.js');
+var Polimorfismo = require('../negocios/Polimorfismo.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -33,11 +33,21 @@ router.post('/login', function(req, res) {
 	};
  
 });
+
 /* GET Jugadores */
 router.get('/Jugadores', function(req, res) {
 	var jr = new JugadoresNegocio();
 
    res.render('jugadores', {jugadores: jr.listado()});
+	
+ 
+});
+
+/* GET Polimorfismo */
+router.get('/Polimorfismo', function(req, res) {
+	var p = new Polimorfismo();
+
+   res.render('polimorfismo', {polimorfismo: p.listaVarios()});
 	
  
 });
