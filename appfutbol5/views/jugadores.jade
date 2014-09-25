@@ -1,0 +1,19 @@
+﻿extends layout
+
+block content
+  h1 Jugadores
+  
+  
+
+  ul
+    each ent, index in jugadores
+       li= ent.getNombre()
+         
+
+  p
+  p 
+  a(href="/") Volver al principal
+  
+  
+
+

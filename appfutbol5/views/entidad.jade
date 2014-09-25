@@ -1,0 +1,29 @@
+﻿extends layout
+
+block content
+  h1 Entidades
+  
+  form(action='/entidades',method='get')
+     input(id='q',type='text',value='#{query}',placeholder='',name='q')
+     input(type='submit',value='Buscar')
+
+  ul
+    each ent, index in entidades
+       li= ent.getNombre()
+         if (ent.jugadores().length)
+            h4 Jugadores
+            ul 
+              each juga, index in ent.jugadores()
+                 li= juga.getNombre()
+         else
+            br
+            span (Sin jugadores en el equipo)
+
+
+  p
+  p 
+  a(href="/") Volver al principal
+  
+  
+
+
