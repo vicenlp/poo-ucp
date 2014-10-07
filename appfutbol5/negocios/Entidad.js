@@ -16,10 +16,7 @@ var Entidad=(function(){
              return listado;
        }
 
-       
-
-
-       }
+      
      
 
      return self;

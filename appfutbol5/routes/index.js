@@ -5,6 +5,7 @@ var Login = require('../negocios/Login.js');
 var Entidad = require('../negocios/Entidad.js');
 var Equipo = require('../entidades/Equipo.js');
 var Polimorfismo = require('../negocios/Polimorfismo.js');
+var JugadoresNegocio = require('../negocios/JugadoresNegocio.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
